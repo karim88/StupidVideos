@@ -1,0 +1,45 @@
+body{
+}
+.cell{
+  text-align: center;
+  box-shadow: 0 0 5px #aaa;
+  color: #fff;
+  height: 60%;
+  width: 100%;
+}
+.col:hover{
+  box-shadow: 0 0 25px #4C9ED9;
+}
+
+.des{
+  color: #fff;
+  background-color: #4C9ED9;
+  font-size: 12px;
+  padding: 10px;
+  height: 40%;
+}
+
+.col{
+  height: 250px;
+  margin-top: 15px;
+}
+.input-group-addon{
+  color: #fff;
+  background-color: #4C9ED9;
+}
+
+.input-group-addon:hover{
+  color: #4C9ED9;
+  background-color: #fff;
+  box-shadow: 0 0 25px #4C9ED9;
+}
+
+.input-group{
+  padding: 1%;
+  padding-left: 8%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px #4C9ED9;
+}
+.container{
+  margin-top: 60px;
+}

@@ -1,0 +1,30 @@
+<div class="input-group navbar-fixed-top">
+  <input type="text" data-ng-model="query" class="form-control"/> 
+  <a class="input-group-addon" data-ng-click="init(query)"><span class="glyphicon glyphicon-search"></span></a> 
+  <button class="btn btn-info pull-right"><span class="glyphicon glyphicon-list"></span></button>
+</div>
+<div class="container">
+  <div class="row">
+    <div data-ng-repeat="video in results.entry" class="colrow col-xs-12 col-sm-4 col-md-3">
+       <div class="col">
+          <div class="cell" style="
+          background-image: url('{{video.media$group.media$thumbnail[0].url}}') ;
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          background-position: center top;">
+          <!--<a href="{{video.link[0].href}}" target="_blank">Watch!</a>-->
+          </div>
+        <div class="des">
+          <h5>{{video.title.$t.substring(0, 50)}}</h5>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8">{{video.yt$statistics.viewCount | number : fractionSize}} views</div>
+            <div class="col-xs-12 col-sm-12 col-md-4"></div>
+          {{getTime(video.media$group.yt$duration.seconds)._data.hours}} : 
+          {{getTime(video.media$group.yt$duration.seconds)._data.minutes}} : 
+          {{getTime(video.media$group.yt$duration.seconds)._data.seconds}}
+          </div>
+        </div>
+       </div>
+    </div>
+  </div>
+</div>
